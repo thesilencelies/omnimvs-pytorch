@@ -152,7 +152,7 @@ def writeImageFloat(image: np.ndarray, tiff_path: str, thumbnail = None):
         if not image.dtype == np.float32:
             image = image.astype(np.float32)
         tiff.save(image, photometric='MINISBLACK', planarconfig='CONTIG',
-                bitspersample=32, compress=9)
+                bitspersample=32)
 
 def readImageFloat(tiff_path: str, return_thumbnail = False,
                    read_or_die = True):
